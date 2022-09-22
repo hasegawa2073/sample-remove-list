@@ -6,6 +6,7 @@
   --gray: #bcbcbc;
   --light-gray: #e5e5e5;
   --blue: #4391fa;
+  --orange: orange;
 }
 html {
   font-size: 62.5%;
@@ -28,6 +29,24 @@ html {
     border: 1px solid var(--gray);
     border-radius: 50%;
     background-color: transparent;
+    cursor: pointer;
+  }
+  &__button-active {
+    position: relative;
+    border: 1px solid orange;
+    &::before {
+      content: '';
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      background-color: orange;
+    }
   }
   &__text {
     position: relative;
@@ -48,6 +67,9 @@ html {
       height: 1px;
       background-color: var(--light-gray);
     }
+  }
+  &__text-done {
+    color: rgba($color: #4e4e4e, $alpha: 0.5);
   }
 }
 .add {
